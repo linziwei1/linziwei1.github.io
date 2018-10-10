@@ -14,11 +14,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          Hello World - LinZiwei
+          MarkDown核心语法 - LinZiwei
         
     </title>
 
-    <link rel="canonical" href="http://linjoey.cn/2017/03/18/hello-world/">
+    <link rel="canonical" href="http://linjoey.cn/2018/10/06/MarkDown核心语法/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -69,7 +69,7 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('wenzhang.png')
+            background-image: url('')
             /*post*/
         
     }
@@ -86,18 +86,18 @@
                     <div class="post-heading">
                         <div class="tags">
                             
-                              <a class="tag" href="/tags/#Hexo" title="Hexo">Hexo</a>
-                            
                               <a class="tag" href="/tags/#Blog" title="Blog">Blog</a>
                             
-                              <a class="tag" href="/tags/#软件" title="软件">软件</a>
+                              <a class="tag" href="/tags/#MarkDown" title="MarkDown">MarkDown</a>
+                            
+                              <a class="tag" href="/tags/#md" title="md">md</a>
                             
                         </div>
-                        <h1>Hello World</h1>
-                        <h2 class="subheading">This is hexo theme Demo.</h2>
+                        <h1>MarkDown核心语法</h1>
+                        <h2 class="subheading">用代码写文章高端大气很费劲</h2>
                         <span class="meta">
                             Posted by Lin Joey on
-                            2017-03-18
+                            2018-10-06
                         </span>
                     </div>
                 
@@ -221,20 +221,87 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2><span id="quick-start">Quick Start</span></h2>
-<h3><span id="create-a-new-post">Create a new post</span></h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3><span id="run-server">Run server</span></h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3><span id="generate-static-files">Generate static files</span></h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3><span id="deploy-to-remote-sites">Deploy to remote sites</span></h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+                <p>Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。<br>
+Markdown具有一系列衍生版本，用于扩展Markdown的功能（如表格、脚注、内嵌HTML等等），这些功能原初的Markdown尚不具备，它们能让Markdown转换成更多的格式，例如LaTeX，Docbook。<br>
+Markdown增强版中比较有名的有Markdown Extra、MultiMarkdown、 Maruku等。这些衍生版本要么基于工具，如Pandoc；要么基于网站，如GitHub和Wikipedia，在语法上基本兼容，但在一些语法和渲染效果上有改动。<br>
+现在就对核心语法进行演示，我挺烦那么多的文字说明的，当年就是因为废话多一度放弃了HTML，现在开始！</p>
+<h2><span id="标题">标题</span></h2>
+<figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 一级标题 #</span><br><span class="line">## 二级标题 ##</span><br><span class="line">### 三级标题 ###</span><br><span class="line">#### 四级标题 ####</span><br><span class="line">##### 五级标题 #####</span><br><span class="line">###### 六级标题 ######</span><br></pre></td></tr></table></figure>
+<p>演示效果：</p>
+<blockquote>
+<h1><span id="一级标题">一级标题</span></h1>
+<h2><span id="二级标题">二级标题</span></h2>
+<h3><span id="三级标题">三级标题</span></h3>
+<h4><span id="四级标题">四级标题</span></h4>
+<h5><span id="五级标题">五级标题</span></h5>
+<h6><span id="六级标题">六级标题</span></h6>
+</blockquote>
+<h2><span id="引用">引用</span></h2>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash"> 这里是引用内容</span></span><br></pre></td></tr></table></figure>
+<p>演示效果：</p>
+<blockquote>
+<p>这里是引用内容</p>
+</blockquote>
+<h2><span id="段落">段落</span></h2>
+<p>强制换行直接回车不行，需要打两个空格。</p>
+<h2><span id="分隔符">分隔符</span></h2>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+<p>演示效果：</p>
+<blockquote>
+<hr>
+<p>这就是分隔符效果，直接打三个小&quot;—&quot;即可。</p>
+</blockquote>
+<h2><span id="列表">列表</span></h2>
+<p>无序列表用&quot;+、-、*……&quot;符号直接写就OK<br>
+有序列表用&quot;1.、2.、3.……&quot;序号直接写就OK<br>
+演示效果：</p>
+<ul>
+<li>无序1</li>
+<li>无序2</li>
+</ul>
+<ol>
+<li>有序1</li>
+<li>有序2</li>
+</ol>
+<h2><span id="超链接">超链接</span></h2>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">文字超链接：[百度](www.baidu.com)</span><br><span class="line">图片超链接：![图片名称](图片地址)</span><br></pre></td></tr></table></figure>
+<p>演示效果：<br>
+<a href="www.baidu.com">百度</a><br>
+<a href="https://imgchr.com/i/iYAn0K" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2018/10/09/iYAn0K.png" alt="iYAn0K.png"></a></p>
+<h2><span id="代码段">代码段</span></h2>
+<p>用键盘ESC下面的在英文输入法下的···即为代码块标识。<br>
+在···后面加上&quot;bash&quot;、&quot;Python&quot;等即为代码类型，影响高亮。<br>
+演示效果：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> D:/alading/adlasd</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">"这是代码演示\n"</span>);</span><br></pre></td></tr></table></figure>
+<h2><span id="字体">字体</span></h2>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">*倾斜*</span><br><span class="line">**加粗**</span><br><span class="line">***倾斜并加粗***</span><br><span class="line">~~文字删除线~~</span><br></pre></td></tr></table></figure>
+<p>演示效果：<br>
+<em>倾斜</em><br>
+<strong>加粗</strong><br>
+<strong><em>倾斜并加粗</em></strong><br>
+<s>文字删除线</s></p>
+<h2><span id="表格">表格</span></h2>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- | <span class="comment">#用来进行分隔操作</span></span><br><span class="line">:   <span class="comment">#用来设置对齐方式</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">表头1 | 表头2 | 表头3</span><br><span class="line">:-----|:----:|-----:</span><br><span class="line">左对齐|居中对齐|右对齐</span><br></pre></td></tr></table></figure>
+<p>演示效果：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">表头1</th>
+<th style="text-align:center">表头2</th>
+<th style="text-align:right">表头3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">左对齐</td>
+<td style="text-align:center">居中对齐</td>
+<td style="text-align:right">右对齐</td>
+</tr>
+</tbody>
+</table>
+<h2><span id="最后保存为md格式即可">最后保存为.md格式即可。</span></h2>
 
                 
 
@@ -242,10 +309,10 @@
                 <!-- Pager -->
                 <ul class="pager">
                     
-                        <li class="previous">
-                            <a href="/2018/10/01/Github Pages+Hexo博客全记/" data-toggle="tooltip" data-placement="top" title="Github Pages+Hexo博客全记">&larr; Previous Post</a>
-                        </li>
                     
+                        <li class="next">
+                            <a href="/2018/10/01/Github Pages+Hexo博客全记/" data-toggle="tooltip" data-placement="top" title="Github Pages+Hexo博客全记">Next Post &rarr;</a>
+                        </li>
                     
                 </ul>
 
@@ -269,17 +336,6 @@
             <!-- Tabe of Content -->
             <!-- Table of Contents -->
 
-    
-      <aside id="sidebar">
-        <div id="toc" class="toc-article">
-        <strong class="toc-title">Contents</strong>
-        
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Quick Start</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">Create a new post</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">Run server</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">Generate static files</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">Deploy to remote sites</span></a></li></ol></li></ol>
-        
-        </div>
-      </aside>
-    
-
                 
             <!-- Sidebar Container -->
             <div class="
@@ -294,11 +350,11 @@
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
-                          <a class="tag" href="/tags/#Hexo" title="Hexo">Hexo</a>
-                        
                           <a class="tag" href="/tags/#Blog" title="Blog">Blog</a>
                         
-                          <a class="tag" href="/tags/#软件" title="软件">软件</a>
+                          <a class="tag" href="/tags/#MarkDown" title="MarkDown">MarkDown</a>
+                        
+                          <a class="tag" href="/tags/#md" title="md">md</a>
                         
                     </div>
                 </section>
@@ -331,8 +387,8 @@
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = "your-disqus-ID";
-    var disqus_identifier = "http://linjoey.cn/2017/03/18/hello-world/";
-    var disqus_url = "http://linjoey.cn/2017/03/18/hello-world/";
+    var disqus_identifier = "http://linjoey.cn/2018/10/06/MarkDown核心语法/";
+    var disqus_url = "http://linjoey.cn/2018/10/06/MarkDown核心语法/";
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
