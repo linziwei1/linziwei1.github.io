@@ -1,258 +1,180 @@
-# Hux blog 模板
-
-### [我的博客在这里 &rarr;](http://huxpro.github.io)
-
-
-### 关于收到"Page Build Warning"的email
-
-由于jekyll升级到3.0.x,对原来的pygments代码高亮不再支持，现只支持一种-rouge，所以你需要在 `_config.yml`文件中修改`highlighter: rouge`.另外还需要在`_config.yml`文件中加上`gems: [jekyll-paginate]`.
-
-同时,你需要更新你的本地jekyll环境.
-
-使用`jekyll server`的同学需要这样：
-
-1. `gem update jekyll` # 更新jekyll
-2. `gem update github-pages` #更新依赖的包
-
-使用`bundle exec jekyll server`的同学在更新jekyll后，需要输入`bundle update`来更新依赖的包.
-
-参考文档：[using jekyll with pages](https://help.github.com/articles/using-jekyll-with-pages/) & [Upgrading from 2.x to 3.x](http://jekyllrb.com/docs/upgrading/2-to-3/)
-
-
-## 关于模板(beta)
-
-我的博客仓库——`huxpro.github.io`，是经常修改的，而且还会有人乱提交代码，因此给大家做了一个稳定版的模板。大家可以直接fork模板——`huxblog-boilerplate`,要改的地方我都说明了。或者可以直接下载zip到本地自己去修改。
-
-```
-$ git clone git@github.com:Huxpro/huxblog-boilerplate.git
-```
-
-**[在这里预览模板 &rarr;](http://huangxuan.me/huxblog-boilerplate/)**
-
-## 各版本特性
-
-##### New Feature (V1.5.2)
-
-* 当你fork了我的仓库之后，还要删掉里面的关于我的文档是不是感到略烦躁呢？**Boilerplate** 模板将帮助你快速开始，方便合并与更新。
-* `-apple-system`被添加到了字体规则里面了，这套字体格式能将iOS9默认的新字体**San Francisco**表现的非常漂亮。
-* 解决了代码过长自动换行的bug,替换为横向滚动条。详情请见[issue#15](https://github.com/Huxpro/huxpro.github.io/issues/15)
-
-###### 其他历史版本个人觉得没有必要了解，看看英文就行了。
-
-
-
-## 支持
-
-* 你可以自由的fork。如果你能将主题作者和 github 的地址保留在你的页面底部，我将非常感谢你。
-* 如果你喜欢我的这个博客模板，请在`huxpro.github.io`这个repository点个赞——右上角**star**一下。
-
-## 说明文档
-
-* 开始
-	* [环境要求](#environment)
-	* [开始](#get-started)
-	* [写一篇博文](#write-posts)
-* 组件
-	* [侧边栏](#sidebar)
-	* [迷你关于我](#mini-about-me)
-	* [推荐标签](#featured-tags)
-	* [好友链接](#friends)
-	* [HTML5 演示文档布局](#keynote-layout)
-* 评论与 Google/Baidu Analytics
-	* [评论](#comment)
-	* [网站分析](#analytics) 
-* 高级部分
-	* [自定义](#customization)
-	* [标题底图](#header-image)
-	* [搜索展示标题-头文件](#seo-title)
-
-#### Environment
-
-如果你安装了jekyll，那你只需要在命令行输入`jekyll serve`就能在本地浏览器预览主题。你还可以输入`jekyll serve --watch`，这样可以边修改边自动运行修改后的文件。
-
-经 [@BrucZhaoR](https://github.com/BruceZhaoR)的测试，好像两个命令都是可以的自动运行修改后的文件的，刷新后可以实时预览。官方文件是建议安装bundler，这样你在本地的效果就跟在github上面是一样的。详情请见这里：https://help.github.com/articles/using-jekyll-with-pages/#installing-jekyll
-
-
-#### Get Started
-
-你可以通用修改 `_config.yml`文件来轻松的开始搭建自己的博客:
-
-```
-# Site settings
-title: Hux Blog             # 你的博客网站标题
-SEOTitle: Hux Blog			# 在后面会详细谈到
-description: "Cool Blog"    # 随便说点，描述一下
-
-# SNS settings      
-github_username: huxpro     # 你的github账号
-weibo_username: huxpro      # 你的微博账号，底部链接会自动更新的。
-
-# Build settings
-# paginate: 10              # 一页你准备放几篇文章
-```
-
-Jekyll官方网站还有很多的参数可以调，比如设置文章的链接形式...网址在这里：[Jekyll - Official Site](http://jekyllrb.com/) 中文版的在这里：[Jekyll中文](http://jekyllcn.com/).
-
-#### write-posts
-
-要发表的文章一般以markdown的格式放在这里`_posts/`，你只要看看这篇模板里的文章你就立刻明白该如何设置。
-
-yaml 头文件长这样:
-
-```
 ---
 layout:     post
-title:      "Hello 2015"
-subtitle:   "Hello World, Hello Blog"
-date:       2015-01-29 12:00:00
-author:     "Hux"
-header-img: "img/post-bg-2015.jpg"
+title:      "Github Pages+jekyll博客全记"
+subtitle:   "不坑不是病，坑起来真要命"
+date:       2019-1-2 12:00:00
+author:     "Lin Joey"
+header-img: "img/post.jpg"
 tags:
-    - Life
+    - Github
+    - jekyll
+    - Blog
+    - MarkDown
+    - Git
+    - 图床
+    - 云服务
+    - ruby
 ---
+## 建站 ##
+> 这两天重新搭建了Github Pages上的博客，换用了jekyll，比之前的hexo差不多，主要就说下环境搭建。
 
+> 还有那些让人欲哭无泪的BUG们=。=
+
+> 话不多说，下面就进入正题。
+
+## 系统环境搭建 ##
+首先安装jekyll，这是GitHub官方推荐的静态网页工具。它类似于WordPress，但只是一个生成静态网页的工具，不需要数据库支持。同时可以配合第三方服务,例如Disqus。
+### 首先安装ruby ###
+> [ 安装git ](http://git-scm.com/download/)
+
+> [ 安装ruby和devkit工具 ](https://rubyinstaller.org/downloads/)  
+
+安装时勾选添加到PATH，以便添加环境变量。
+>这里有个贼坑的地方，安装路径一定不能在二级目录，只能直接在盘符下一级目录安装，否则就会出现一堆百度和谷歌解决不了的问题，别问我怎么知道的=。=
+
+![](http://ww1.sinaimg.cn/large/7c08400ely1g2kwkvvhd8j20dz0atq3i.jpg)
+安装完成后继续安装msys2，直接选finish就可以进入安装界面。
+![](http://ww1.sinaimg.cn/large/7c08400ely1g2kwkvtmw0j20dz0at752.jpg)
+然后选择第三项（输入3），等待安装提示success后关闭即可。
+![](http://ww1.sinaimg.cn/large/7c08400ely1g2kwkvsxv3j20qr07l745.jpg)
+
+### 安装RubyGems ###
+ruby 是一种语言，是某些软件包代码的执行环境。而gem是管理这些基于ruby程序的程序。
+
+> [ 安装RubyGems ](https://rubygems.org/pages/download)
+> 
+> Windows中下载ZIP格式比较方便，下载后解压到任意路径。
+
+执行以下指令安装
+```bash
+$ cd {unzip-path} // unzip-path表示解压的路径
+$ ruby setup.rb
 ```
 
-#### SideBar
-
-看右边:
-![](http://huangxuan.me/img/blog-sidebar.jpg)
-
-设置是在 `_config.yml`文件里面的`Sidebar settings`那块。
-```
-# Sidebar settings
-sidebar: true  #添加侧边栏
-sidebar-about-description: "简单的描述一下你自己"
-sidebar-avatar: /img/avatar-hux.jpg     #你的大头贴，请使用绝对地址.
+### 安装jekyll ###
+cmd中输入指令安装
+```bash
+$ gem install jekyll
 ```
 
-侧边栏是响应式布局的，当屏幕尺寸小于992px的时候，侧边栏就会移动到底部。具体请见bootstrap栅格系统 <http://v3.bootcss.com/css/>
-
-
-#### Mini About Me
-
-Mini-About-Me 这个模块将在你的头像下面，展示你所有的社交账号。这个也是响应式布局，当屏幕变小时候，会将其移动到页面底部，只不过会稍微有点小变化，具体请看代码。
-
-#### Featured Tags
-
-看到这个网站 [Medium](http://medium.com) 的推荐标签非常的炫酷，所以我将他加了进来。
-这个模块现在是独立的，可以呈现在所有页面，包括主页和发表的每一篇文章标题的头上。
-
+### 验证安装完成 ###
+在cmd中输入：
+```bash
+$ jekyll -v
 ```
-# Featured Tags
-featured-tags: true  
-featured-condition-size: 1     # A tag will be featured if the size of it is more than this condition value
+成功输出版本号说明安装成功。
+
+
+## 开启本地实时预览 ##
+切换到仓库所在目录，在cmd中输入:
+```bash
+$ jekyll serve
 ```
 
-唯一需要注意的是`featured-condition-size`: 如果一个标签的 SIZE，也就是使用该标签的文章数大于上面设定的条件值，这个标签就会在首页上被推荐。
- 
-内部有一个条件模板 `{% if tag[1].size > {{site.featured-condition-size}} %}` 是用来做筛选过滤的.
+![](http://ww1.sinaimg.cn/mw690/7c08400ely1g2kxc3onxwj20fo0a63zh.jpg)
+访问http://127.0.0.1:4000/即可看到效果。
 
+>有时会遇到jekyll serve启动报错如下。这是因为jekyll默认使用4000端口，而4000是FoxitProtect（福昕阅读器的一个服务）的默认端口。最简单的办法就是指定端口，例如：
 
-#### Friends
-
-好友链接部分。这会在全部页面显示。
-
-设置是在 `_config.yml`文件里面的`Friends`那块，自己加吧。
-
-```
-# Friends
-friends: [
-    {
-        title: "Foo Blog",
-        href: "http://foo.github.io/"
-    },
-    {
-        title: "Bar Blog",
-        href: "http://bar.github.io"
-    }
-]
+```bash
+Incremental build: disabled. Enable with --incremental
+      Generating...
+jekyll 3.7.3 | Error:  Permission denied @ rb_sysopen - C:/Users/username/NTUSER.DAT
 ```
 
-
-#### Keynote Layout
-
-HTML5幻灯片的排版：
-
-![](http://huangxuan.me/img/blog-keynote.jpg)
-
-这部分是用于占用html格式的幻灯片的，一般用到的是 Reveal.js, Impress.js, Slides, Prezi 等等.我认为一个现代化的博客怎么能少了放html幻灯的功能呢~
-
-其主要原理是添加一个 `iframe`，在里面加入外部链接。你可以直接写到头文件里面去，详情请见下面的yaml头文件的写法。
-
+```bash
+$ jekyll serve -P 5555
 ```
+
+然后该写文章写文章，该自定义功能代码就自定义。。。。。。
+
+## push到GitHub ##
+本地博客做好，接下来就是上线了。跟普通项目流程基本一致。
+首先新建一个项目，然后clone下来，把本地所有文件放进去先。（不是clone下来的或者从别的代码代管clone下来的都不行）
+
+### 本地添加SSH ###
+#### 1、首先需要检查你电脑是否已经有 SSH key  ####
+运行 git Bash 客户端，输入如下代码：
+```bash
+$ cd ~/.ssh
+$ ls
+```
+这两个命令就是检查是否已经存在 id_rsa.pub 或 id_dsa.pub 文件，如果文件已经存在，那么你可以跳过步骤2，直接进入步骤3。
+
+#### 2、创建一个 SSH key ####
+```bash
+$ ssh-keygen -t rsa -C "your_email@example.com"
+```
+代码参数含义：  
+-t 指定密钥类型，默认是 rsa ，可以省略。  
+-C 设置注释文字，比如邮箱。
+-f 指定密钥文件存储文件名。  
+
+以上代码省略了 -f 参数，因此，运行上面那条命令后会让你输入一个文件名，用于保存刚才生成的 SSH key 代码，如：
+```bash
+Generating public/private rsa key pair.
+# Enter file in which to save the key (/c/Users/you/.ssh/id_rsa): [Press enter]
+```
+当然，你也可以不输入文件名，使用默认文件名（推荐），那么就会生成 id_rsa 和 id_rsa.pub 两个秘钥文件。
+
+接着又会提示你输入两次密码（该密码是你push文件的时候要输入的密码，而不是github管理者的密码），
+
+当然，你也可以不输入密码，直接按回车（两次回车，一次输入，一次确认）。那么push的时候就不需要输入密码，直接提交到github上了。
+
+#### 3、添加你的 SSH key 到 github上面去 ####
+a、根据生成的文件地址找到对应的id_rsa.pub文件，用notepad++等工具打开将秘钥进行复制。
+
+b、登录你的github账号，从右上角的设置（ Account Settings ）进入，然后点击菜单栏的 SSH key 进入页面添加 SSH key。
+
+c、点击 Add SSH key 按钮添加一个 SSH key 。把你复制的 SSH key 代码粘贴到 key 所对应的输入框中，记得 SSH key 代码的前后不要留有空格或者回车。当然，上面的 Title 所对应的输入框你也可以输入一个该 SSH key 显示在 github 上的一个别名。默认的会使用你的邮件名称。
+[![iYuNxe.png](https://s1.ax1x.com/2018/10/09/iYuNxe.png)](https://imgchr.com/i/iYuNxe)
+
+#### 4、测试一下该SSH key ####
+在git Bash 中输入以下代码
+```bash
+$ ssh -T git@github.com
+```
+当你输入以上代码时，会有一段警告代码，如：
+```bash
+The authenticity of host 'github.com (207.97.227.239)' can't be established.
+# RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
+# Are you sure you want to continue connecting (yes/no)?
+```
+这是正常的，你输入 yes 回车既可。如果你创建 SSH key 的时候设置了密码，接下来就会提示你输入密码，如：
+```bash
+Enter passphrase for key '/c/Users/Administrator/.ssh/id_rsa':
+```
+当然如果你密码输错了，会再要求你输入。当然前面你两次回车的话这里就不用管了。
+
+注意：输入密码时如果输错一个字就会不正确，使用删除键是无法更正的。
+
+密码正确后你会看到下面这段话，如：
+```bash
+Hi username! You've successfully authenticated, but GitHub does not
+# provide shell access.
+```
+如果用户名是正确的,你已经成功设置SSH密钥。如果你看到 “access denied” ，者表示拒绝访问，那么你就需要使用 https 去访问，而不是 SSH 。
+
+### 上传开始 ###
 ---
-layout:     keynote
-iframe:     "http://huangxuan.me/js-module-7day/"
----
+> 在博客目录右键git bash，输入以下代码：
+
+```bash
+git config --global user.email "你的GitHub邮箱"
+git config --global user.name "你的GitHub用户名"
 ```
-
-iframe在不同的设备中，将会自动的调整大小。保留内边距是为了让手机用户可以向下滑动，以及添加更多的内容。
-
-
-#### Comment
-
-博客不仅支持多说[Duoshuo](http://duoshuo.com)评论系统，也支持[Disqus](http://disqus.com)评论系统。
-
-`Disqus`优点是：国际比较流行，界面也很大气、简介，如果有人评论，还能实时通知，直接回复通知的邮件就行了；缺点是：评论必须要去注册一个disqus账号，分享一般只有Facebook和Twitter，另外在墙内加载速度略慢了一点。想要知道长啥样，可以看以前的版本点[这里](http://brucezhaor.github.io/about.html) 最下面就可以看到。
-
-`多说` 优点是：支持国内各主流社交软件(微博，微信，豆瓣，QQ空间 ...)一键分享按钮功能，另外登陆比较方便，管理界面也是纯中文的，相对于disqus全英文的要容易操作一些；缺点是：就是界面丑了一点。
-当然你是可以自定义界面的css的，详情请看多说开发者文档 http://dev.duoshuo.com/docs/5003ecd94cab3e7250000008 。
-
-**首先**，你需要去注册一个账号，不管是disqus还是多说的。**不要直接使用我的啊！**
-
-**其次**，你只需要在下面的yaml头文件中设置一下就可以了。
-
+下面就可以正式发布了！
+```bash
+git add .
+git commit -m "提交信息"
+git push
 ```
-duoshuo_username: _你的用户名_
-# 或者
-disqus_username: _你的用户名_
-```
+没有报错的话，上传完毕就可以用"你的用户名.github.io"作为地址浏览了。
 
-**最后**多说是支持分享的，如果你不想分享，请这样设置：`duoshuo_share: false`。你可以同时使用两个评论系统，不过个人感觉怪怪的。
+## 要一个更好记的域名？ ##
+如果你觉得上面的域名不大好记，那可以去腾讯云或万网注册一个新的域名，然后添加解析到github.io空间上就可以了。  
+PS：GitHub Pages有一个好处就是免于备案了，当然坏处就是空间和速度牺牲了一些，不过对于个人用户来说也足够了。
 
-#### Analytics
-
-网站分析，现在支持百度统计和Google Analytics。需要去官方网站注册一下，然后将返回的code贴在下面：
-
-```
-# Baidu Analytics
-ba_track_id: 4cc1f2d8f3067386cc5cdb626a202900
-
-# Google Analytics
-ga_track_id: 'UA-49627206-1'            # 你用Google账号去注册一个就会给你一个这样的id
-ga_domain: huangxuan.me			# 默认的是 auto, 这里我是自定义了的域名，你如果没有自己的域名，需要改成auto。
-```
-
-#### Customization
-
-如果你喜欢折腾，你可以去自定义我的这个模板的 code，[Grunt](gruntjs.com)已经为你准备好了。（感谢 Clean Blog）
-
-JavaScript 的压缩混淆、Less 的编译、Apache 2.0 许可通告的添加与 watch 代码改动，这些任务都揽括其中。简单的在命令行中输入 `grunt` 就可以执行默认任务来帮你构建文件了。如果你想搞一搞 JavaScript 或 Less 的话，`grunt watch` 会帮助到你的。
-
-**如果你可以理解 `_include/` 和 `_layouts/`文件夹下的代码（这里是整个界面布局的地方），你就可以使用 Jekyll 使用的模版引擎 [Liquid](https://github.com/Shopify/liquid/wiki)的语法直接修改/添加代码，来进行更有创意的自定义界面啦！**
-
-#### Header Image
-
-标题底图是可以自己选的，看看几篇示例post你就知道如何设置了。在
-  [issue #6 ](https://github.com/Huxpro/huxpro.github.io/issues/6) 中我被问到：怎么样才能让标题底图好看呢？
-  
-标题底图的选取完全是看个人的审美了，我也帮不了你。每一篇文章可以有不同的底图，你想放什么就放什么，最后宽度要够，大小不要太大，否则加载慢啊。
-
-但是需要注意的是本模板的标题是**白色**的，所以背景色要设置为**灰色**或者**黑色**，总之深色系就对了。当然你还可以自定义修改字体颜色，总之，用github pages就是可以完全的个性定制自己的博客。
-
-#### SEO Title
-
-我的博客标题是 **“Hux Blog”** 但是我想要在搜索的时候显示 **“黄玄的博客 | Hux Blog”** ，这个就需要SEO Title来定义了。
-
-其实这个SEO Title就是定义了<head><title>标题</title></head>这个里面的东西和多说分享的标题，你可以自行修改的。
-
-## 致谢
-
-1. 这个模板是从这里[IronSummitMedia/startbootstrap-clean-blog-jekyll](https://github.com/IronSummitMedia/startbootstrap-clean-blog-jekyll)  fork 的。 感谢这个作者
-2. 感谢[@BrucZhaoR](https://github.com/BruceZhaoR)的中文翻译 
-
-3. 感谢 Jekyll、Github Pages 和 Bootstrap!
-
-
-
+## 关于图片存储 ##
+由于服务器速度和空间限制，我们最好的做法是把图片托管在网络图床上，可以推荐的有[七牛云](https://www.qiniu.com/)（但是这货需要你上传手持身份证照片才能给你10G，所以我放弃了）、[路过图床](https://imgchr.com/)（免注册，我现在正在用的）。
+更新：最好的做法其实是新浪微博图床，这个可以自行搜索Chrome插件，非常好用，新浪微博的服务器绝对既快又稳定。
