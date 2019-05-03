@@ -4,6 +4,7 @@ title:      "长白山旅游攻略"
 subtitle:   "玉拥千秋遣太白，疑似瑶池落峰头"
 date:       2019-01-02 12:00:00
 author:     "Lin Joey"
+header-img: "img/post.jpg"
 tags:
     - 旅游
     - 东北旅游

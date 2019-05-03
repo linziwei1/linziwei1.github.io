@@ -4,6 +4,7 @@ title:      "沈阳旅游攻略"
 subtitle:   "东方鲁尔的美丽与沧桑"
 date:       2019-01-02 12:00:00
 author:     "Lin Joey"
+header-img: "img/post.jpg"
 tags:
     - 旅游
     - 东北旅游

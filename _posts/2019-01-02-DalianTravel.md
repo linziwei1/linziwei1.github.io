@@ -4,6 +4,7 @@ title:      "大连旅游攻略"
 subtitle:   "北方明珠，浪漫之都"
 date:       2019-01-02 12:00:00
 author:     "Lin Joey"
+header-img: "img/post.jpg"
 tags:
     - 旅游
     - 东北旅游

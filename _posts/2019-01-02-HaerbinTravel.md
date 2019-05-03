@@ -4,6 +4,7 @@ title:      "哈尔滨旅游攻略"
 subtitle:   "凝于零下30度的老时光"
 date:       2019-01-02 12:00:00
 author:     "Lin Joey"
+header-img: "img/post.jpg"
 tags:
     - 旅游
     - 东北旅游
