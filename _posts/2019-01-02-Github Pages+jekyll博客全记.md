@@ -55,6 +55,7 @@ $ ruby setup.rb
 cmd中输入指令安装
 ```bash
 $ gem install jekyll
+$ gem install "jekyll-paginate" 
 ```
 
 ### 验证安装完成 ###
