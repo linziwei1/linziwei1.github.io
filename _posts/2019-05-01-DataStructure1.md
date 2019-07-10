@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "数据结构绪论思维导图"
+title:      "数据结构思维导图（1）：绪论"
 subtitle:   "相关概念及算法衡量"
 date:       2019-05-01 12:00:00
 author:     "Lin Joey"
