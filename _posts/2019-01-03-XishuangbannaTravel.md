@@ -7,7 +7,7 @@ author:     "Lin Joey"
 header-img: "img/post.jpg"
 tags:
     - 旅游
-    - 云南旅游
+    - 国内旅游
 ---
 >西双版纳，理想而神奇的乐土，古语叫“勐巴拉娜西"。
 >

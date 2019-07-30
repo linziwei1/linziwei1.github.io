@@ -7,7 +7,7 @@ author:     "Lin Joey"
 header-img: "img/post.jpg"
 tags:
     - 旅游
-    - 浙江旅游
+    - 国内旅游
 ---
 
 >农夫山泉有点甜。

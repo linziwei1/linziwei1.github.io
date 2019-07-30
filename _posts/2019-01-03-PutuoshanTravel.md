@@ -7,7 +7,7 @@ author:     "Lin Joey"
 header-img: "img/post.jpg"
 tags:
     - 旅游
-    - 浙江旅游
+    - 国内旅游
 ---
 
 >各种各样的人，怀着各种各样的愿望，从各种各样的地方，来到了普陀山。

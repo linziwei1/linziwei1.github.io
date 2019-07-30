@@ -7,7 +7,7 @@ author:     "Lin Joey"
 header-img: "img/post.jpg"
 tags:
     - 旅游
-    - 华中旅游
+    - 国内旅游
 ---
 
 >第一眼张家界，就被那伫立苍穹，如万夫当关的磅礴气势所俘虏。
