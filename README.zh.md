@@ -1,20 +1,3 @@
----
-layout:     post
-title:      "Github Pages+jekyll博客全记"
-subtitle:   "不坑不是病，坑起来真要命"
-date:       2019-1-2 12:00:00
-author:     "Lin Joey"
-header-img: "img/post.jpg"
-tags:
-    - Github
-    - jekyll
-    - Blog
-    - MarkDown
-    - Git
-    - 图床
-    - 云服务
-    - ruby
----
 ## 建站 ##
 > 这两天重新搭建了Github Pages上的博客，换用了jekyll，比之前的hexo差不多，主要就说下环境搭建。
 
@@ -32,11 +15,11 @@ tags:
 安装时勾选添加到PATH，以便添加环境变量。
 >这里有个贼坑的地方，安装路径一定不能在二级目录，只能直接在盘符下一级目录安装，否则就会出现一堆百度和谷歌解决不了的问题，别问我怎么知道的=。=
 
-![](http://ww1.sinaimg.cn/large/7c08400ely1g2kwkvvhd8j20dz0atq3i.jpg)
+![](https://linjoey-image.oss-cn-beijing.aliyuncs.com/1.jpg)
 安装完成后继续安装msys2，直接选finish就可以进入安装界面。
-![](http://ww1.sinaimg.cn/large/7c08400ely1g2kwkvtmw0j20dz0at752.jpg)
+![](https://linjoey-image.oss-cn-beijing.aliyuncs.com/2.jpg)
 然后选择第三项（输入3），等待安装提示success后关闭即可。
-![](http://ww1.sinaimg.cn/large/7c08400ely1g2kwkvsxv3j20qr07l745.jpg)
+![](https://linjoey-image.oss-cn-beijing.aliyuncs.com/3.jpg)
 
 ### 安装RubyGems ###
 ruby 是一种语言，是某些软件包代码的执行环境。而gem是管理这些基于ruby程序的程序。
@@ -55,6 +38,7 @@ $ ruby setup.rb
 cmd中输入指令安装
 ```bash
 $ gem install jekyll
+$ gem install "jekyll-paginate" 
 ```
 
 ### 验证安装完成 ###
@@ -71,7 +55,7 @@ $ jekyll -v
 $ jekyll serve
 ```
 
-![](http://ww1.sinaimg.cn/mw690/7c08400ely1g2kxc3onxwj20fo0a63zh.jpg)
+![](https://linjoey-image.oss-cn-beijing.aliyuncs.com/4.jpg)
 访问http://127.0.0.1:4000/即可看到效果。
 
 >有时会遇到jekyll serve启动报错如下。这是因为jekyll默认使用4000端口，而4000是FoxitProtect（福昕阅读器的一个服务）的默认端口。最简单的办法就是指定端口，例如：
@@ -178,3 +162,4 @@ PS：GitHub Pages有一个好处就是免于备案了，当然坏处就是空间
 ## 关于图片存储 ##
 由于服务器速度和空间限制，我们最好的做法是把图片托管在网络图床上，可以推荐的有[七牛云](https://www.qiniu.com/)（但是这货需要你上传手持身份证照片才能给你10G，所以我放弃了）、[路过图床](https://imgchr.com/)（免注册，我现在正在用的）。
 更新：最好的做法其实是新浪微博图床，这个可以自行搜索Chrome插件，非常好用，新浪微博的服务器绝对既快又稳定。
+再特么更新：免费的午餐都不香，新浪限制外链了，害死人了喵的！！！还是自己花钱阿里云买个OSS然后自己传吧，，最放心了！
