@@ -165,3 +165,56 @@ Due to server speed and space limitations, our best practice is to host the pict
 Update: The best way is actually Sina Weibo map bed, this can search for Chrome plug-ins by yourself, very easy to use, Sina Weibo's server is absolutely fast and stable.
 
 What's the fucking update plus: Free lunch is not fragrant, Sina restricts the outer chain, killing people! ! ! Spend money to buy an OSS in Aliyun and then pass it on yourself, the most rest assured!
+
+
+## Jekyll-Search ##
+需要用到一个插件[simple-jekyll-search](https://github.com/christian-fei/Simple-Jekyll-Search)
+
+### Create search.json ###
+```bash
+---
+layout: null
+---
+[
+  {% for post in site.posts %}
+    {
+      "title"    : "{{ post.title | escape }}",
+      "category" : "{{ post.category }}",
+      "tags"     : "{{ post.tags | join: ', ' }}",
+      "url"      : "{{ site.baseurl }}{{ post.url }}",
+      "date"     : "{{ post.date }}"
+    } {% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]
+```
+### Copy JS ###
+Copy simple-jekyll-search.min.js to the root/js  of site from the project.
+
+### Update nav.html ###
+As for this theme,we need to update***_includes/nav.html***.
+Code:Insert to  the html.
+
+```bash
+<!-- HTML elements for search-->
+<div id="search-container" style="float:right;position: fixed;right:0px; bottom:10px; z-index:999999;background:#eeeeee;padding:10px 10px 0px 10px;">
+  <input type="text" id="search-input" placeholder="search..." style="border:2px solid;border-radius:25px;padding-left:10px !important;" >
+  <ul id="results-container" style="max-width:300px;"></ul>
+</div>
+
+<!-- script pointing to jekyll-search.js-->
+<script src="{{ site.baseurl }}/js/simple-jekyll-search.min.js"></script>
+
+ <script>
+      window.simpleJekyllSearch = new SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('results-container'),
+        json: '{{ site.baseurl }}/search.json',
+        searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+        noResultsText: 'No results found',
+        limit: 5,
+        fuzzy: false,
+        exclude: ['Welcome']
+      })
+    </script>
+
+```

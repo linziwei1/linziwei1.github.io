@@ -180,3 +180,55 @@ PS：GitHub Pages有一个好处就是免于备案了，当然坏处就是空间
 由于服务器速度和空间限制，我们最好的做法是把图片托管在网络图床上，可以推荐的有[七牛云](https://www.qiniu.com/)（但是这货需要你上传手持身份证照片才能给你10G，所以我放弃了）、[路过图床](https://imgchr.com/)（免注册，我现在正在用的）。
 更新：最好的做法其实是新浪微博图床，这个可以自行搜索Chrome插件，非常好用，新浪微博的服务器绝对既快又稳定。
 再特么更新：免费的午餐都不香，新浪限制外链了，害死人了喵的！！！还是自己花钱阿里云买个OSS然后自己传吧，，最放心了！
+
+## 添加全站搜索功能 ##
+需要用到一个插件[simple-jekyll-search](https://github.com/christian-fei/Simple-Jekyll-Search)
+
+### 新建一个json文件search.json ###
+```bash
+---
+layout: null
+---
+[
+  {% for post in site.posts %}
+    {
+      "title"    : "{{ post.title | escape }}",
+      "category" : "{{ post.category }}",
+      "tags"     : "{{ post.tags | join: ', ' }}",
+      "url"      : "{{ site.baseurl }}{{ post.url }}",
+      "date"     : "{{ post.date }}"
+    } {% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]
+```
+### 复制JS ###
+复制上面项目链接dest目录下面的simple-jekyll-search.min.js到网站根目录的js文件夹里面。
+
+### 修改页面文件 ###
+对本主题来说需修改***_includes/nav.html***这个文件
+有效代码：插入到中间即可。
+
+```bash
+<!-- HTML elements for search-->
+<div id="search-container" style="float:right;position: fixed;right:0px; bottom:10px; z-index:999999;background:#eeeeee;padding:10px 10px 0px 10px;">
+  <input type="text" id="search-input" placeholder="search..." style="border:2px solid;border-radius:25px;padding-left:10px !important;" >
+  <ul id="results-container" style="max-width:300px;"></ul>
+</div>
+
+<!-- script pointing to jekyll-search.js-->
+<script src="{{ site.baseurl }}/js/simple-jekyll-search.min.js"></script>
+
+ <script>
+      window.simpleJekyllSearch = new SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('results-container'),
+        json: '{{ site.baseurl }}/search.json',
+        searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+        noResultsText: 'No results found',
+        limit: 5,
+        fuzzy: false,
+        exclude: ['Welcome']
+      })
+    </script>
+
+```
