@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "高等数学（1）：极限与连续"
+title:      "高等数学思维导图（1）：极限与连续"
 subtitle:   "函数、极限、连续及洛必达、夹逼定理证明"
 date:       2019-05-02 12:00:00
 author:     "Lin Joey"
