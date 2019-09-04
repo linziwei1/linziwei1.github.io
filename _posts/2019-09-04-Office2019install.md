@@ -30,16 +30,17 @@ Office2019本体及激活工具： [点此下载](https://pan.baidu.com/s/18yLZn
 
 ## 3、安装软件 ##
 在下载好的Professional2019Retail文件处右键解压到当前目录（压缩软件可选2345好压、bandizip、7zip、360压缩等等），高版本win10也可以直接双击用虚拟光驱加载。
- <div align=center>![](https://linjoey-image.oss-cn-beijing.aliyuncs.com/Office1.png)</div>
-解压完成后，点击setup安装，下一步下一步下一步，安装过程会有些慢，耐心等待。安装完成后所有Office软件就安装完毕了，接下来就是激活工作。
+ <div align=center>![](https://linjoey-image.oss-cn-beijing.aliyuncs.com/Office1.png)
 
+解压完成后，点击setup安装，下一步下一步下一步，安装过程会有些慢，耐心等待。安装完成后所有Office软件就安装完毕了，接下来就是激活工作。
 
 ## 4、激活Office ##
 激活很简单，解压下载好的“office2019激活”文件，直接打开“office2019激活.bat”文件，如果提示需要管理员权限确定即可。等运行框消失，激活完成。
- <div align=center>![](https://linjoey-image.oss-cn-beijing.aliyuncs.com/Office2.png)</div>
-之后打开Word，点击左边“账户”查看状态，如下图所显示，已激活2019，说明激活成功，安装到此结束。不需要进行下面的步骤了。
- <div align=center>![](https://linjoey-image.oss-cn-beijing.aliyuncs.com/Office3.png)</div>
-如果未激活成功，就用到了备用激活工具，解压“KMS Tools Portable”，打开里面的KMSTools，选择“KMSAuto Lite”，选择下图所示，等待运行完成显示completed为止，激活成功。
- <div align=center>![](https://linjoey-image.oss-cn-beijing.aliyuncs.com/Office4.png)</div>
+ <div align=center>![](https://linjoey-image.oss-cn-beijing.aliyuncs.com/Office2.png)
 
+之后打开Word，点击左边“账户”查看状态，如下图所显示，已激活2019，说明激活成功，安装到此结束。不需要进行下面的步骤了。
+ <div align=center>![](https://linjoey-image.oss-cn-beijing.aliyuncs.com/Office3.png)
+
+如果未激活成功，就用到了备用激活工具，解压“KMS Tools Portable”，打开里面的KMSTools，选择“KMSAuto Lite”，选择下图所示，等待运行完成显示completed为止，激活成功。
+ <div align=center>![](https://linjoey-image.oss-cn-beijing.aliyuncs.com/Office4.png)
 
