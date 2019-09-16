@@ -33,10 +33,11 @@ Office2019本体及激活工具： [点此下载](https://pan.baidu.com/s/18yLZn
  <div align=center>![](https://linjoey-image.oss-cn-beijing.aliyuncs.com/Office1.png)
 
 解压完成后，点击setup安装，下一步下一步下一步，安装过程会有些慢，耐心等待。安装完成后所有Office软件就安装完毕了，接下来就是激活工作。
+ <div align=center>![](https://linjoey-image.oss-cn-beijing.aliyuncs.com/Office2.png)
 
 ## 4、激活Office ##
 激活很简单，解压下载好的“office2019激活”文件，直接打开“office2019激活.bat”文件，如果提示需要管理员权限确定即可。等运行框消失，激活完成。
- <div align=center>![](https://linjoey-image.oss-cn-beijing.aliyuncs.com/Office2.png)
+
 
 之后打开Word，点击左边“账户”查看状态，如下图所显示，已激活2019，说明激活成功，安装到此结束。不需要进行下面的步骤了。
  <div align=center>![](https://linjoey-image.oss-cn-beijing.aliyuncs.com/Office3.png)
