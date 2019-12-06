@@ -2,7 +2,7 @@
 layout:     post
 title:      "数据结构思维导图（2）：线性表"
 subtitle:   "线性表的基本操作、顺序表、链表"
-date:       2019-05-02 12:00:00
+date:       2019-06-02 12:00:00
 author:     "Lin Joey"
 header-img: "img/post.jpg"
 tags:
