@@ -10,7 +10,7 @@ tags:
     - 思维导图
 ---
 
-> 文章中思维导图转载自：https://blog.csdn.net/huzai9527/article/details/86132009
+> 文章中思维导图转载自： []: https://blog.csdn.net/huzai9527/article/details/8613200
 
 ## 一、计算机系统概述 ##
 ![](https://linjoey-image.oss-cn-beijing.aliyuncs.com/1、计算机发展概述.png)
