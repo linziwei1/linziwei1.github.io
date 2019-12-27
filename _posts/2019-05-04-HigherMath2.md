@@ -2,7 +2,7 @@
 layout:     post
 title:      "高等数学思维导图（2）：一元微分学"
 subtitle:   "导数、中值定理 、极值、弧微分、渐近线"
-date:       2019-05-02 12:00:00
+date:       2019-05-04 12:00:00
 author:     "Lin Joey"
 header-img: "img/post.jpg"
 tags:
