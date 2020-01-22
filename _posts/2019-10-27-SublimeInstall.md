@@ -136,6 +136,9 @@ JS代码格式化插件。
 效果如下图：
 ![](https://linjoey-image.oss-cn-beijing.aliyuncs.com/SideBarEnhancements.png)
 
+#### 13、converttoutf8 ####
+作用：使记事本默认编码GBK等正确显示。
+使用方法：菜单File- reload和set Unicode那俩选项
 
 ## 五、删除插件 ##
 ctrl + shift + p 或 菜单中的“view -> Show Console”。输入：
