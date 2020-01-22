@@ -185,22 +185,21 @@ PS：GitHub Pages有一个好处就是免于备案了，当然坏处就是空间
 需要用到一个插件[simple-jekyll-search](https://github.com/christian-fei/Simple-Jekyll-Search)
 
 ### 新建一个json文件search.json ###
-```c
----
-layout: null
----
-[
-  {% for post in site.posts %}
-    {
-      "title"    : "{{ post.title | escape }}",
-      "category" : "{{ post.category }}",
-      "tags"     : "{{ post.tags | join: ', ' }}",
-      "url"      : "{{ site.baseurl }}{{ post.url }}",
-      "date"     : "{{ post.date }}"
-    } {% unless forloop.last %},{% endunless %}
-  {% endfor %}
-]
-```
+>   
+> ---  
+> layout: null  
+> ---   
+> [  
+>   {% for post in site.posts %}  
+>     {  
+>       "title"    : "{{ post.title | escape }}",  
+>       "category" : "{{ post.category }}",  
+>       "tags"     : "{{ post.tags | join: ', ' }}",  
+>       "url"      : "{{ site.baseurl }}{{ post.url }}",  
+>       "date"     : "{{ post.date }}"  
+>     } {% unless forloop.last %},{% endunless %}  
+>   {% endfor %}  
+> ]  
 
 ### 复制JS ###
 复制上面项目链接dest目录下面的simple-jekyll-search.min.js到网站根目录的js文件夹里面。

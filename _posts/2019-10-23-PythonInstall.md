@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Python安装教程"
-subtitle:   "开启Java编程的第一步"
+subtitle:   "开启Python编程的第一步"
 date:       2019-10-23 12:00:00
 author:     "Lin Joey"
 header-img: "img/post.jpg"
@@ -31,7 +31,6 @@ tags:
 
 接下来就是next，next……如果想自定义路径自己设置就好，注意路径中不要有中文名字。然后点击install即可，安装完成后如下图。
 <div align=center> ![](https://linjoey-image.oss-cn-beijing.aliyuncs.com/pythoninstall5.png) </div>
-
 ### 3、测试Python是否安装成功 ###
 快捷键：win+R，输入cmd，回车
 输入python，如果显示下图，则说明安装成功。如果显示别的，说明环境变量配置出了问题，需要手动配置，至于手动怎么配置，请自行百度，不再赘述。
