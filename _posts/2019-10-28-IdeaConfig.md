@@ -101,6 +101,10 @@ tags:
 ![](https://linjoey-image.oss-cn-beijing.aliyuncs.com/idea8.png)  
 #### 2、编辑类 ####
 ![](https://linjoey-image.oss-cn-beijing.aliyuncs.com/idea9.png)  
+#### 3、编码常用 ####
+> 直接输入psv就会看到一个psvm的提示，此时点击tab键一个main方法就写好了  
+> 在方法体内键入for会有一个fori的提示，选中然后tab键，就会自动创建一个for循环  
+> sout就是System.out.println();  
 
 
 ## 六、创建项目 ##
@@ -233,7 +237,7 @@ mvn install:install-file -Dfile=jar包的位置(参数一) -DgroupId=groupId(参
 
 ### 9、IDEAMAVEN - 父子-聚合项目 ###
 （1）**父子-聚合项目**： 所谓的父子项目，即有一个父项目，有多个子项目。这些子项目，在业务逻辑上，都归纳在这个父项目下，并且一般来说，都会有重复的jar包共享。  
-（2）**新建父项目**：Create new project -> 左边选择Maven -> Create from archetype -> org.apache.maven.archetypes:maven-archetype-quickstart -> Next -> 填信息名字（AitifactId为parentMavenProject） -> Finish  
+（2）**新建父项目**：Create new project -> 左边选择Maven -> Create from archetype -> org.apache.maven.archetypes:maven-archetype-quickstart -> Next -> 填信息名字（ArtifactId为parentMavenProject） -> Finish  
 （3）**修改pom.xml**：idea 自动生成的 pom.xml 有一大堆东西，很多都用不着。  
 ```bash
 	1、<packaging>jar</packaging>修改为<packaging>pom</packaging>
@@ -252,7 +256,7 @@ mvn install:install-file -Dfile=jar包的位置(参数一) -DgroupId=groupId(参
     </dependency>
   </dependencies>
 ```
-（4）**创建子项目**：子项目其实是maven module。右键点击 parentMavenProject->New->Module。Create new project -> 左边选择Maven -> Create from archetype -> org.apache.maven.archetypes:maven-archetype-quickstart -> Next -> 填信息名字（AitifactId为childMavenProject） -> Finish。  
+（4）**创建子项目**：子项目其实是maven module。右键点击 parentMavenProject->New->Module。左边选择Maven -> Create from archetype -> org.apache.maven.archetypes:maven-archetype-quickstart -> Next -> 填信息名字（AitifactId为childMavenProject） -> Finish。  
 （5）**TestHutool**：在 childMavenProject 下新建 TestHutool类，并运行。输出“2012-12-12 12:12:12”。可以发现，是可以使用 hutool jar 里的类的。 这说明子项目，能够使用 父项目中的 jar 包了。  
 ```java
 	package childMavenProject;
@@ -294,7 +298,7 @@ mvn install:install-file -Dfile=jar包的位置(参数一) -DgroupId=groupId(参
 （3）设置好了之后，IDEA的git准备工作就做好了  
 
 ### 4、IDEA pull项目 ###
-（1）**checkout新建分支**：菜单->VCS->Chekout from Version Control->GitHub  
+（1）**checkout新建分支**：菜单->VCS->Checkout from Version Control->GitHub  
 （2）**输入项目参数**：Git Repositor URL：项目链接；Parent Directory：路径；Directory Name：项目名称。然后点击 Clone。  
 （3）如此就拿到了Git上的项目  
 
