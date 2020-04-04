@@ -13,7 +13,7 @@ future: true
 
 # SNS settings
 RSS: false
-weibo_username:     JoeyLin777
+#weibo_username:     JoeyLin777
 #zhihu_username:     lin-zi-wei-lision
 github_username:    linziwei1
 #twitter_username:   huxpro
@@ -59,7 +59,7 @@ kramdown:
 
 
 # Disqus settings
-disqus_username: linjoey
+disqus_username: false
 
 # Netease settings
 netease_comment: false
@@ -103,22 +103,7 @@ page-mathjax: false
 # Friends
 friends: [
     {
-        title: "吾爱破解",
-        href: "https://www.52pojie.cn/"
-    },{
-        title: "前端外刊评论",
-        href: "http://qianduan.guru/"
-    },{
-        title: "黄玄的博客",
-        href: "http://huangxuan.me"
-    },{
-        title: "Luke 的自留地",
-        href: "http://hmqk1995.github.io"
-    },{
-        title: "Ebn's Blog",
-        href: "http://ebnbin.com/"
-    },{
-        title: "尹峰以为",
-        href: "http://ingf.github.io/"
+        title: "我的网盘",
+        href: "http://linjoey.cn/myonedrive/#/"
     }
 ]
