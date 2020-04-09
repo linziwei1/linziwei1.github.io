@@ -96,6 +96,10 @@ tags:
 **作用**：更换主题，增加美观度。  
 **使用方法**：安装后重启IDEA自动进入设置（貌似2019版本开始才会自动进入设置）  
 
+#### 12、Translation ####
+按下载量排序，找到完全匹配的插件下载。
+
+
 ## 五、常用快捷键 ##
 #### 1、查找类 ####
 ![](https://linjoey-image.oss-cn-beijing.aliyuncs.com/idea8.png)  
